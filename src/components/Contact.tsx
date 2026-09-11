@@ -9,29 +9,36 @@ export default function Contact() {
           Let&rsquo;s Work Together
         </p>
         <h2 className="mx-auto mt-4 max-w-lg text-[24px] font-bold leading-[1.2] tracking-[-0.02em] text-[#111111] sm:text-[30px] md:text-[36px]">
-          Have a project in mind? Let&rsquo;s make it unforgettable.
+          Let&rsquo;s bring your next story to life.
         </h2>
         <p className="mx-auto mt-4 max-w-md text-[16px] leading-[1.65] text-[#52525B]">
-          Currently booking commercial, music video, and documentary edits
-          for Q1 2026.
+          Based in Mumbai, India and available for video editing and graphic design projects.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
-            href="mailto:alex.vance.editor@example.com"
+            href="mailto:prathamsadavarti@gmail.com"
             className="flex items-center gap-2.5 rounded-full bg-[#111111] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] active:scale-[0.99]"
           >
             <MailIcon className="h-4 w-4" />
-            alex.vance.editor@example.com
+            prathamsadavarti@gmail.com
           </a>
 
           <a
-            href="mailto:alex.vance.editor@example.com?subject=Booking%20Inquiry"
+            href="mailto:prathamsadavarti@gmail.com?subject=Project%20Inquiry"
             className="flex items-center gap-2 rounded-full bg-[#2563EB] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-transform duration-200 ease-out hover:scale-[1.02] active:scale-[0.99]"
           >
-            Booking Inquiry
+            Start a Project
             <ArrowUpRightIcon className="h-4 w-4" />
           </a>
+        </div>
+
+        <div className="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm font-medium text-[#52525B]">
+          <a href="tel:+917219801721" className="transition-colors hover:text-[#2563EB]">
+            +91 7219801721
+          </a>
+          <span aria-hidden="true" className="hidden text-black/20 sm:inline">•</span>
+          <span>Mumbai, India</span>
         </div>
       </Reveal>
     </section>
