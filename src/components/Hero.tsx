@@ -1,22 +1,8 @@
-import RoleSwitcher from "./RoleSwitcher";
 import Reveal from "./Reveal";
-import {
-  VimeoIcon,
-  YoutubeIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  MailIcon,
-  PlayIcon,
-  DownloadIcon,
-} from "./Icons";
+import { MailIcon, PlayIcon, ArrowUpRightIcon } from "./Icons";
 
-const SOCIALS = [
-  { label: "Vimeo", href: "https://vimeo.com/placeholder", icon: VimeoIcon },
-  { label: "YouTube", href: "https://youtube.com/@placeholder", icon: YoutubeIcon },
-  { label: "Instagram", href: "https://instagram.com/placeholder", icon: InstagramIcon },
-  { label: "LinkedIn", href: "https://linkedin.com/in/placeholder", icon: LinkedinIcon },
-  { label: "Email", href: "mailto:alex.vance.editor@example.com", icon: MailIcon },
-];
+const BIO =
+  "I'm a video editor and graphic designer with a passion for adding animation and motion to bring stories to life. Skilled in Adobe Premiere Pro, After Effects, and Photoshop, I create clean, engaging, and impactful content. From social media edits to brand visuals, I bring creativity, speed, and attention to detail. I'm ready to contribute fresh ideas and strong visual storytelling to any creative team.";
 
 export default function Hero({ onPlayReel }: { onPlayReel: () => void }) {
   return (
@@ -24,32 +10,25 @@ export default function Hero({ onPlayReel }: { onPlayReel: () => void }) {
       id="showreel"
       className="mx-auto grid max-w-[960px] grid-cols-1 items-center gap-12 px-4 pb-20 pt-10 sm:px-6 sm:pt-16 md:grid-cols-[minmax(0,320px)_1fr] md:gap-10 md:pt-20"
     >
-      {/* Left column: avatar + socials */}
+      {/* Left column: avatar + contact */}
       <Reveal className="flex flex-col items-center gap-7 md:items-start">
         <div className="relative">
           <span className="absolute -inset-3 rounded-full border-2 border-[#F97316]/70" />
           <span className="absolute -inset-6 rounded-full border border-[#F97316]/30" />
           <img
             src="/images/avatar.jpg"
-            alt="Alex Vance, video editor and colorist"
+            alt="Pratham Sadavarti, video editor and graphic designer"
             className="relative h-40 w-40 rounded-full border-4 border-white object-cover shadow-sm sm:h-44 sm:w-44"
           />
         </div>
 
-        <div className="flex flex-wrap justify-center gap-2.5 md:justify-start">
-          {SOCIALS.map(({ label, href, icon: Icon }) => (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith("http") ? "_blank" : undefined}
-              rel="noreferrer"
-              aria-label={label}
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#111111] shadow-sm ring-1 ring-black/5 transition-transform duration-200 ease-out hover:scale-[1.08] hover:text-[#2563EB]"
-            >
-              <Icon className="h-4 w-4" />
-            </a>
-          ))}
-        </div>
+        <a
+          href="mailto:prathamsadavarti@gmail.com"
+          aria-label="Email Pratham Sadavarti"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#111111] shadow-sm ring-1 ring-black/5 transition-transform duration-200 ease-out hover:scale-[1.08] hover:text-[#2563EB]"
+        >
+          <MailIcon className="h-4 w-4" />
+        </a>
       </Reveal>
 
       {/* Right column: header + bio */}
@@ -58,16 +37,13 @@ export default function Hero({ onPlayReel }: { onPlayReel: () => void }) {
           Visual Storyteller
         </p>
         <h1 className="mt-4 text-[26px] font-bold leading-[1.2] tracking-[-0.02em] text-[#111111] sm:text-[32px] md:text-[40px]">
-          Alex Vance —{" "}
-          <span className="block md:inline">
-            <RoleSwitcher />
+          Pratham Sadavarti —{" "}
+          <span className="block text-[#2563EB] md:inline">
+            Video Editor &amp; Graphic Designer
           </span>
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-[16px] leading-[1.65] text-[#52525B] md:mx-0 sm:text-[18px]">
-          I&rsquo;m a post-production specialist and editor crafting high-impact
-          commercial campaigns, narrative films, and dynamic social content.
-          Specializing in seamless pacing, sound design, and cinematic color
-          grading.
+          {BIO}
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
@@ -83,12 +59,13 @@ export default function Hero({ onPlayReel }: { onPlayReel: () => void }) {
           </button>
 
           <a
-            href="/rate-card.pdf"
-            download
+            href="https://prathamsadavarti.com"
+            target="_blank"
+            rel="noreferrer"
             className="flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#111111] shadow-sm ring-1 ring-black/5 transition-transform duration-200 ease-out hover:scale-[1.02] active:scale-[0.99]"
           >
-            <DownloadIcon className="h-4 w-4" />
-            Download Rate Card &amp; Deck
+            View Portfolio
+            <ArrowUpRightIcon className="h-4 w-4" />
           </a>
         </div>
       </Reveal>

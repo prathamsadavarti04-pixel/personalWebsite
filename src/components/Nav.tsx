@@ -24,11 +24,11 @@ export default function Nav() {
         {/* Left: monogram pill */}
         <div className="flex items-center gap-2.5 rounded-full bg-white/80 py-1.5 pl-1.5 pr-4 shadow-sm backdrop-blur-md ring-1 ring-black/5">
           <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-[#111111] text-xs font-bold tracking-tight text-white">
-            AV
+            PS
             <span className="absolute -inset-0.5 -z-10 rounded-full border-2 border-[#F97316]" />
           </span>
           <span className="text-[15px] font-bold tracking-tight text-[#111111]">
-            Alex Vance.
+            Pratham Sadavarti.
           </span>
         </div>
 
